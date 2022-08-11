@@ -7,6 +7,7 @@ main {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 div {
@@ -24,21 +25,41 @@ div {
   height: 100%;
 }
 
-h1 {
+.intro-text {
   font-family: 'Silkscreen', cursive;
-  font-size: 100px;
+  font-size: calc(50px + 0.390625vw);
   text-align: center;
   margin: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.intro-text.slide {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .front {
   background-color: #ff9600;
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.front.slice {
   -webkit-clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
           clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
 }
 
 .front h1 {
   color: #323232;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 .back {
@@ -47,5 +68,7 @@ h1 {
 
 .back h1 {
   color: white;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=style.css.map */

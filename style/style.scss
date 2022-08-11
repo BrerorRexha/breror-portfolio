@@ -8,6 +8,7 @@ main {
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 div {
@@ -19,19 +20,32 @@ div {
     height: 100%;
 }
 
-h1 {
+.intro-text {
     font-family: 'Silkscreen', cursive;
-    font-size: 100px;
+    font-size: calc(50px + 0.390625vw);
     text-align: center;
     margin: 0;
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+
+    &.slide {
+        transform: translateX(0);
+    }
 }
 
 .front {
     background-color: rgb(255, 150, 0);
-    clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+    transition: all 1s ease;
+    transition-delay: 0.5s;
+
+    &.slice {
+        clip-path: polygon(0 0, 70% 0, 30% 100%, 0 100%);
+    }
 
     h1 {
         color: rgb(50, 50, 50);
+        transform: translateX(50%);
     }
 }
 
@@ -40,5 +54,6 @@ h1 {
 
     h1 {
         color: rgb(255, 255, 255);
+        transform: translateX(-50%);
     }
 }
