@@ -50,6 +50,10 @@ div {
           transform: translateX(0) !important;
 }
 
+.text-container.hidden {
+  display: none;
+}
+
 .intro-text {
   font-family: 'Silkscreen', cursive;
   font-size: calc(50px + 0.390625vw);

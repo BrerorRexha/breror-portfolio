@@ -33,6 +33,10 @@ div {
     &.slide {
         transform: translateX(0) !important;
     }
+
+    &.hidden {
+        display: none;
+    }
 }
 
 .intro-text {
